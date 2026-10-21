@@ -4344,11 +4344,11 @@ var Layout = /* @__PURE__ */ __name((props) => {
       /* @__PURE__ */ jsxDEV("meta", { name: "description", content: props.description }),
       /* @__PURE__ */ jsxDEV("link", { rel: "canonical", href: canonical }),
       /* @__PURE__ */ jsxDEV("meta", { name: "theme-color", content: "#04050a" }),
-      /* @__PURE__ */ jsxDEV("link", { rel: "icon", href: "/logo.png" }),
+      /* @__PURE__ */ jsxDEV("link", { rel: "icon", href: "/logo.svg" }),
       /* @__PURE__ */ jsxDEV("meta", { property: "og:type", content: "website" }),
       /* @__PURE__ */ jsxDEV("meta", { property: "og:title", content: props.title }),
       /* @__PURE__ */ jsxDEV("meta", { property: "og:description", content: props.description }),
-      /* @__PURE__ */ jsxDEV("meta", { property: "og:image", content: props.siteUrl.replace(/\/$/, "") + "/logo.png" }),
+      /* @__PURE__ */ jsxDEV("meta", { property: "og:image", content: props.siteUrl.replace(/\/$/, "") + "/logo.svg" }),
       /* @__PURE__ */ jsxDEV("meta", { property: "og:url", content: canonical }),
       /* @__PURE__ */ jsxDEV("meta", { name: "twitter:card", content: "summary_large_image" }),
       props.jsonLd ? /* @__PURE__ */ jsxDEV(
@@ -4453,13 +4453,13 @@ var CityBackground = /* @__PURE__ */ __name(() => /* @__PURE__ */ jsxDEV("div", 
 ] }), "CityBackground");
 var Header = /* @__PURE__ */ __name(() => /* @__PURE__ */ jsxDEV("header", { class: "site-head", children: [
   /* @__PURE__ */ jsxDEV("a", { href: "/", class: "brand", "aria-label": "DJ Chan home", children: [
-    /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "DJ Chan", width: "52", height: "52" }),
+    /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "DJ Chan", width: "52", height: "52" }),
     /* @__PURE__ */ jsxDEV("span", { children: "DJ\xA0CHAN" })
   ] }),
   /* @__PURE__ */ jsxDEV("nav", { children: /* @__PURE__ */ jsxDEV("a", { href: "/book", class: "btn btn-gold btn-sm", children: "Book now" }) })
 ] }), "Header");
 var Footer = /* @__PURE__ */ __name((p) => /* @__PURE__ */ jsxDEV("footer", { class: "site-foot", children: [
-  /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "", width: "40", height: "40", "aria-hidden": "true" }),
+  /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "", width: "40", height: "40", "aria-hidden": "true" }),
   /* @__PURE__ */ jsxDEV("div", { class: "foot-links", children: [
     /* @__PURE__ */ jsxDEV("a", { href: p.instagram, children: "Instagram" }),
     /* @__PURE__ */ jsxDEV("a", { href: p.tiktok, children: "TikTok" }),
@@ -4690,14 +4690,9 @@ var PARALLAX_JS = `
 
 // src/pages/landing.tsx
 var STATS = [
-  { n: "500+", l: "Events played" },
-  { n: "12 yrs", l: "On the decks" },
+  { n: "100+", l: "Events played" },
+  { n: "5 yrs", l: "On the decks" },
   { n: "4.9\u2605", l: "Average rating" }
-];
-var QUOTES = [
-  { p: "Chan read the room all night and kept the floor packed. Best decision we made for our wedding.", who: "Sample review" },
-  { p: "Seamless mixing, pro setup, and showed up early. Our corporate launch felt like a headline show.", who: "Sample review" },
-  { p: "Booked for a birthday and it turned into the party of the year. Already rebooking.", who: "Sample review" }
 ];
 var Landing = /* @__PURE__ */ __name((p) => {
   const base = p.siteUrl.replace(/\/$/, "");
@@ -4707,8 +4702,8 @@ var Landing = /* @__PURE__ */ __name((p) => {
     name: "DJ Chan",
     description: "Open format DJ and MC for weddings, private parties, clubs and corporate events.",
     url: base,
-    logo: `${base}/logo.png`,
-    image: `${base}/logo.png`,
+    logo: `${base}/logo.svg`,
+    image: `${base}/logo.svg`,
     email: p.contactEmail,
     priceRange: "$$",
     makesOffer: SERVICES.map((s) => ({
@@ -4732,7 +4727,7 @@ var Landing = /* @__PURE__ */ __name((p) => {
         /* @__PURE__ */ jsxDEV("div", { class: "mobile-bio", children: [
           /* @__PURE__ */ jsxDEV("main", { children: [
             /* @__PURE__ */ jsxDEV("section", { class: "hero", children: [
-              /* @__PURE__ */ jsxDEV("img", { class: "logo-badge", src: "/logo.png", alt: "DJ Chan logo", width: "200", height: "200" }),
+              /* @__PURE__ */ jsxDEV("img", { class: "logo-badge", src: "/logo.svg", alt: "DJ Chan logo", width: "200", height: "200" }),
               /* @__PURE__ */ jsxDEV("h1", { children: "Open format DJ & MC" }),
               /* @__PURE__ */ jsxDEV("p", { class: "tag", children: [
                 "Weddings, parties, clubs and brand events. ",
@@ -4771,7 +4766,7 @@ var Landing = /* @__PURE__ */ __name((p) => {
         /* @__PURE__ */ jsxDEV("div", { class: "desktop-site", children: [
           /* @__PURE__ */ jsxDEV("header", { class: "topnav", children: /* @__PURE__ */ jsxDEV("div", { class: "inner", children: [
             /* @__PURE__ */ jsxDEV("a", { class: "brand", href: "/", "aria-label": "DJ Chan home", children: [
-              /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "DJ Chan", width: "44", height: "44" }),
+              /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "DJ Chan", width: "44", height: "44" }),
               /* @__PURE__ */ jsxDEV("span", { children: "DJ\xA0CHAN" })
             ] }),
             /* @__PURE__ */ jsxDEV("nav", { class: "navlinks", "aria-label": "Primary", children: [
@@ -4796,7 +4791,7 @@ var Landing = /* @__PURE__ */ __name((p) => {
                   /* @__PURE__ */ jsxDEV("a", { class: "btn", href: "#services", children: "View packages" })
                 ] })
               ] }),
-              /* @__PURE__ */ jsxDEV("div", { class: "art", children: /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "DJ Chan logo", width: "430", height: "430" }) })
+              /* @__PURE__ */ jsxDEV("div", { class: "art", children: /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "DJ Chan logo", width: "430", height: "430" }) })
             ] }),
             /* @__PURE__ */ jsxDEV("section", { id: "services", class: "d-section", children: /* @__PURE__ */ jsxDEV("div", { class: "d-wrap", children: [
               /* @__PURE__ */ jsxDEV("h2", { children: "Packages" }),
@@ -4831,16 +4826,9 @@ var Landing = /* @__PURE__ */ __name((p) => {
               ] })) })
             ] }) }),
             /* @__PURE__ */ jsxDEV("section", { id: "reviews", class: "d-section", children: /* @__PURE__ */ jsxDEV("div", { class: "d-wrap", children: [
-              /* @__PURE__ */ jsxDEV("h2", { children: "What clients say" }),
-              /* @__PURE__ */ jsxDEV("p", { class: "sect-sub", children: "A few words from the dancefloor. (Sample reviews shown.)" }),
-              /* @__PURE__ */ jsxDEV("div", { class: "quotes", children: QUOTES.map((q) => /* @__PURE__ */ jsxDEV("div", { class: "quote", children: [
-                /* @__PURE__ */ jsxDEV("p", { children: [
-                  "\u201C",
-                  q.p,
-                  "\u201D"
-                ] }),
-                /* @__PURE__ */ jsxDEV("div", { class: "who", children: q.who })
-              ] })) })
+              /* @__PURE__ */ jsxDEV("h2", { children: "Reviews" }),
+              /* @__PURE__ */ jsxDEV("p", { class: "sect-sub", children: "Been on the dancefloor with DJ Chan? Share your experience." }),
+              p.googleReviewUrl ? /* @__PURE__ */ jsxDEV("div", { style: "text-align:center", children: /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: p.googleReviewUrl, target: "_blank", rel: "noopener noreferrer", children: "Review on Google" }) }) : null
             ] }) }),
             /* @__PURE__ */ jsxDEV("section", { class: "d-wrap", children: /* @__PURE__ */ jsxDEV("div", { class: "cta-band", children: [
               /* @__PURE__ */ jsxDEV("h2", { children: "Ready to lock your date?" }),
@@ -4850,7 +4838,7 @@ var Landing = /* @__PURE__ */ __name((p) => {
           ] }),
           /* @__PURE__ */ jsxDEV("footer", { id: "contact", class: "d-foot", children: /* @__PURE__ */ jsxDEV("div", { class: "inner", children: [
             /* @__PURE__ */ jsxDEV("a", { class: "brand", href: "/", "aria-label": "DJ Chan home", children: [
-              /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "DJ Chan", width: "40", height: "40" }),
+              /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "DJ Chan", width: "40", height: "40" }),
               /* @__PURE__ */ jsxDEV("span", { children: "DJ\xA0CHAN" })
             ] }),
             /* @__PURE__ */ jsxDEV("nav", { class: "foot-links", "aria-label": "Social and contact", children: [
@@ -4994,7 +4982,7 @@ var BookingPage = /* @__PURE__ */ __name((p) => {
 var ResultPage = /* @__PURE__ */ __name((p) => /* @__PURE__ */ jsxDEV(Layout, { title: `${p.heading} | DJ Chan`, description: p.body, siteUrl: p.siteUrl, children: [
   /* @__PURE__ */ jsxDEV(Header, {}),
   /* @__PURE__ */ jsxDEV("main", { class: "wrap", style: "padding-top:8px", children: /* @__PURE__ */ jsxDEV("div", { class: "panel", style: "text-align:center", children: [
-    /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "DJ Chan", width: "90", height: "90", style: "margin:0 auto 14px;border-radius:12px" }),
+    /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "DJ Chan", width: "90", height: "90", style: "margin:0 auto 14px;border-radius:12px" }),
     /* @__PURE__ */ jsxDEV("div", { class: `notice ${p.ok ? "ok" : "warn"}`, style: "text-align:left", children: p.body }),
     /* @__PURE__ */ jsxDEV("h1", { class: "page-title", children: p.heading }),
     /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: "/", children: "Back to home" })
@@ -5005,7 +4993,7 @@ var ResultPage = /* @__PURE__ */ __name((p) => /* @__PURE__ */ jsxDEV(Layout, { 
 // src/pages/admin.tsx
 var AdminLogin = /* @__PURE__ */ __name((p) => /* @__PURE__ */ jsxDEV(Layout, { title: "Admin | DJ Chan", description: "DJ Chan admin", siteUrl: p.siteUrl, children: /* @__PURE__ */ jsxDEV("main", { class: "wrap", style: "max-width:420px;padding-top:60px", children: [
   /* @__PURE__ */ jsxDEV("div", { style: "text-align:center;margin-bottom:20px", children: [
-    /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "DJ Chan", width: "80", height: "80", style: "margin:0 auto 10px;border-radius:12px" }),
+    /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "DJ Chan", width: "80", height: "80", style: "margin:0 auto 10px;border-radius:12px" }),
     /* @__PURE__ */ jsxDEV("h1", { class: "page-title", children: "Admin login" })
   ] }),
   p.error ? /* @__PURE__ */ jsxDEV("div", { class: "notice err", children: p.error }) : null,
@@ -5023,7 +5011,7 @@ var AdminDashboard = /* @__PURE__ */ __name((p) => {
   return /* @__PURE__ */ jsxDEV(Layout, { title: "Dashboard | DJ Chan", description: "DJ Chan admin dashboard", siteUrl: p.siteUrl, children: /* @__PURE__ */ jsxDEV("main", { class: "wrap", style: "max-width:900px", children: [
     /* @__PURE__ */ jsxDEV("div", { class: "tabler", style: "padding:18px 0", children: [
       /* @__PURE__ */ jsxDEV("div", { class: "brand", style: "display:flex;align-items:center;gap:10px", children: [
-        /* @__PURE__ */ jsxDEV("img", { src: "/logo.png", alt: "", width: "42", height: "42", style: "border-radius:9px" }),
+        /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "", width: "42", height: "42", style: "border-radius:9px" }),
         /* @__PURE__ */ jsxDEV("strong", { style: "letter-spacing:1px", children: "Admin dashboard" })
       ] }),
       /* @__PURE__ */ jsxDEV("div", { style: "display:flex;gap:10px", children: [
@@ -5157,6 +5145,7 @@ var AdminDashboard = /* @__PURE__ */ __name((p) => {
 
 // src/index.tsx
 var app = new Hono2();
+app.get("/logo.svg", (c) => c.body("<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><defs><linearGradient id=\"gold\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#f6e6b4\"/><stop offset=\".48\" stop-color=\"#d4af57\"/><stop offset=\"1\" stop-color=\"#a67c32\"/></linearGradient></defs><rect width=\"512\" height=\"512\" rx=\"64\" fill=\"#08090e\"/><rect x=\"22\" y=\"22\" width=\"468\" height=\"468\" rx=\"48\" fill=\"none\" stroke=\"url(#gold)\" stroke-width=\"3\"/><path d=\"M96 344h320\" stroke=\"url(#gold)\" stroke-width=\"2\"/><text x=\"256\" y=\"285\" text-anchor=\"middle\" font-family=\"Arial,Helvetica,sans-serif\" font-weight=\"900\" font-size=\"208\" letter-spacing=\"-12\" fill=\"url(#gold)\">DJ</text><text x=\"260\" y=\"404\" text-anchor=\"middle\" font-family=\"Arial,Helvetica,sans-serif\" font-weight=\"700\" font-size=\"56\" letter-spacing=\"16\" fill=\"url(#gold)\">CHAN</text></svg>", 200, { "Content-Type": "image/svg+xml", "Cache-Control": "public, max-age=3600" }));
 var ADMIN_COOKIE = "dj_admin";
 function sessionSecret(env2) {
   return env2.SESSION_SECRET || "dev-insecure-session-secret-change-me";
@@ -5196,6 +5185,7 @@ app.get("/", (c) => {
       Landing,
       {
         siteUrl: e.SITE_URL,
+        googleReviewUrl: e.GOOGLE_REVIEW_URL,
         contactEmail: e.CONTACT_EMAIL,
         instagram: e.INSTAGRAM_URL,
         tiktok: e.TIKTOK_URL,
