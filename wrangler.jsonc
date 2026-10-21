@@ -1,0 +1,23 @@
+{
+  "name": "djchan",
+  "main": "index.js",
+  "compatibility_date": "2025-01-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "no_bundle": true,
+  "keep_vars": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "djchan",
+      "database_id": "d3aaf5b9-1ee6-4e9a-9248-d54562f8929f"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true
+    }
+  }
+}
