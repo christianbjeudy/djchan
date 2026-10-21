@@ -4461,7 +4461,7 @@ var Header = /* @__PURE__ */ __name(() => /* @__PURE__ */ jsxDEV("header", { cla
 var Footer = /* @__PURE__ */ __name((p) => /* @__PURE__ */ jsxDEV("footer", { class: "site-foot", children: [
   /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "", width: "40", height: "40", "aria-hidden": "true" }),
   /* @__PURE__ */ jsxDEV("div", { class: "foot-links", children: [
-    /* @__PURE__ */ jsxDEV("a", { href: p.instagram, children: "Instagram" }),
+    /* @__PURE__ */ jsxDEV("a", { href: "https://www.instagram.com/frandypeter64/", children: "Instagram" }),
     /* @__PURE__ */ jsxDEV("a", { href: p.tiktok, children: "TikTok" }),
     /* @__PURE__ */ jsxDEV("a", { href: `mailto:${p.contactEmail}`, children: p.contactEmail })
   ] }),
@@ -4736,7 +4736,7 @@ var Landing = /* @__PURE__ */ __name((p) => {
             ] }),
             /* @__PURE__ */ jsxDEV("nav", { class: "links", "aria-label": "Primary links", children: [
               /* @__PURE__ */ jsxDEV("a", { class: "link-btn primary", href: "/book", children: "Check availability & book" }),
-              /* @__PURE__ */ jsxDEV("a", { class: "link-btn", href: p.instagram, children: "Instagram" }),
+              /* @__PURE__ */ jsxDEV("a", { class: "link-btn", href: "https://www.instagram.com/frandypeter64/", children: "Instagram" }),
               /* @__PURE__ */ jsxDEV("a", { class: "link-btn", href: p.tiktok, children: "TikTok / mixes" }),
               /* @__PURE__ */ jsxDEV("a", { class: "link-btn", href: `mailto:${p.contactEmail}`, children: "Email for inquiries" })
             ] }),
@@ -4827,8 +4827,8 @@ var Landing = /* @__PURE__ */ __name((p) => {
             ] }) }),
             /* @__PURE__ */ jsxDEV("section", { id: "reviews", class: "d-section", children: /* @__PURE__ */ jsxDEV("div", { class: "d-wrap", children: [
               /* @__PURE__ */ jsxDEV("h2", { children: "Reviews" }),
-              /* @__PURE__ */ jsxDEV("p", { class: "sect-sub", children: "Been on the dancefloor with DJ Chan? Share your experience." }),
-              p.googleReviewUrl ? /* @__PURE__ */ jsxDEV("div", { style: "text-align:center", children: /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: p.googleReviewUrl, target: "_blank", rel: "noopener noreferrer", children: "Review on Google" }) }) : null
+              /* @__PURE__ */ jsxDEV("p", { class: "sect-sub", children: "Been on the dancefloor with DJ Chan? Connect on Instagram and share your experience." }),
+              /* @__PURE__ */ jsxDEV("div", { style: "text-align:center", children: /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: "https://www.instagram.com/frandypeter64/", target: "_blank", rel: "noopener noreferrer", children: "Connect on Instagram" }) })
             ] }) }),
             /* @__PURE__ */ jsxDEV("section", { class: "d-wrap", children: /* @__PURE__ */ jsxDEV("div", { class: "cta-band", children: [
               /* @__PURE__ */ jsxDEV("h2", { children: "Ready to lock your date?" }),
@@ -4842,7 +4842,7 @@ var Landing = /* @__PURE__ */ __name((p) => {
               /* @__PURE__ */ jsxDEV("span", { children: "DJ\xA0CHAN" })
             ] }),
             /* @__PURE__ */ jsxDEV("nav", { class: "foot-links", "aria-label": "Social and contact", children: [
-              /* @__PURE__ */ jsxDEV("a", { href: p.instagram, children: "Instagram" }),
+              /* @__PURE__ */ jsxDEV("a", { href: "https://www.instagram.com/frandypeter64/", children: "Instagram" }),
               /* @__PURE__ */ jsxDEV("a", { href: p.tiktok, children: "TikTok" }),
               /* @__PURE__ */ jsxDEV("a", { href: `mailto:${p.contactEmail}`, children: p.contactEmail })
             ] }),
