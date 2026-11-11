@@ -4751,7 +4751,7 @@ var Landing = /* @__PURE__ */ __name((p) => {
     description: "New York City DJ and MC for weddings, private celebrations, corporate events and nightlife.",
     url: base,
     logo: `${base}/logo.svg`,
-    image: `${base}/logo.svg`,
+    image: `${base}/media/dj-chan-hero.jpg`,
     email: p.contactEmail,
     priceRange: "$$",
     makesOffer: SERVICES.map((s) => ({
