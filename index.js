@@ -4362,6 +4362,7 @@ var Layout = /* @__PURE__ */ __name((props) => {
     ] }),
     /* @__PURE__ */ jsxDEV("body", { children: [
 
+      jsxDEV(CityBackground, {}),
       props.children,
       /* @__PURE__ */ jsxDEV("script", { dangerouslySetInnerHTML: { __html: GALLERY_JS } })
     ] })
@@ -4714,6 +4715,21 @@ body{background:#11110f;color:#f4f0e7}
  .cta-band{padding:34px 20px}
 }
 @media(max-width:480px){.cards-4{grid-template-columns:minmax(0,1fr)}.cards-4 .card h3,.cards-4 .card .muted{min-height:0}}
+
+/* Nighttime NYC, with warm metallic accents */
+body{background:#090a10}
+.city-bg{background:linear-gradient(160deg,#080911 20%,#13131f 68%,#221a12)}
+.city-bg .bg-dim{opacity:.28}
+.topnav,.d-foot{background:rgba(9,10,16,.88);backdrop-filter:blur(16px)}
+.d-hero{position:relative}
+.d-hero .eyebrow{display:inline-block;padding-bottom:12px;border-bottom:1px solid #a98349}
+.d-hero h1 .gold-text,.cards-4 .price .gold-text,.stat-big .gold-text{background:var(--gold-gradient);background-clip:text;color:transparent}
+.hero-gallery{border-color:#9c7844;box-shadow:0 22px 64px #0009,0 0 38px #d4af5724}
+.btn-gold,.topnav .navlinks a.btn-gold{background:var(--gold-gradient);box-shadow:0 6px 20px #0005}
+.cards-4 .card,.stat-big{background:linear-gradient(155deg,#29251fe8,#15151bec);border-color:#6c5639;box-shadow:0 10px 28px #0004}
+.cards-4 .card:hover{border-color:#d4af57}
+.d-section{border-color:#b58d4b47}
+.cta-band{background:radial-gradient(ellipse at 50% 0%,#4b3824,#181720 72%);border-color:#896a40;box-shadow:0 16px 48px #0006}
 
 `;
 var GALLERY_JS = "document.querySelectorAll('.hero-gallery').forEach(function (gallery) {\n  var slides = gallery.querySelectorAll('.hero-slide');\n  var controls = gallery.querySelector('.gallery-controls');\n  if (!controls || slides.length < 2) return;\n  var index = 0;\n  controls.hidden = false;\n  controls.querySelectorAll('button').forEach(function (button) {\n    button.addEventListener('click', function () {\n      slides[index].hidden = true;\n      index = (index + Number(button.dataset.step) + slides.length) % slides.length;\n      slides[index].hidden = false;\n      controls.querySelector('[aria-live]').textContent = (index + 1) + ' / ' + slides.length;\n    });\n  });\n});";
