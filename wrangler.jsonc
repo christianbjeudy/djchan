@@ -19,5 +19,8 @@
     "traces": {
       "enabled": true
     }
+  },
+  "assets": {
+    "directory": "./public"
   }
 }

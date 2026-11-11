@@ -3404,34 +3404,34 @@ var deleteCookie = /* @__PURE__ */ __name((c, name, opt) => {
 var SERVICES = [
   {
     id: "party",
-    name: "Private Party",
+    name: "Private Celebrations",
     tagline: "Birthdays, house parties, celebrations",
-    priceCents: 6e4,
-    depositCents: 15e3,
+    priceCents: 30000,
+    depositCents: 7500,
     features: ["Up to 4 hours", "Pro sound + lighting", "Open format", "MC on the mic"]
   },
   {
     id: "wedding",
-    name: "Wedding",
+    name: "The Wedding Collection",
     tagline: "Ceremony, cocktail hour, reception",
-    priceCents: 18e4,
-    depositCents: 45e3,
+    priceCents: 90000,
+    depositCents: 22500,
     features: ["Up to 8 hours", "Ceremony + reception", "Planning consultation", "Backup gear on site"]
   },
   {
     id: "club",
-    name: "Club / Venue",
+    name: "The Venue Set",
     tagline: "Nightlife sets and residencies",
-    priceCents: 9e4,
-    depositCents: 2e4,
+    priceCents: 45000,
+    depositCents: 10000,
     features: ["Up to 3 hours", "Curated open format", "Crowd reading", "Clean transitions"]
   },
   {
     id: "corporate",
-    name: "Corporate Event",
+    name: "Corporate & Gala",
     tagline: "Launches, galas, brand activations",
-    priceCents: 15e4,
-    depositCents: 4e4,
+    priceCents: 75000,
+    depositCents: 20000,
     features: ["Up to 6 hours", "Professional setup", "Custom playlist", "On time, every time"]
   }
 ];
@@ -4361,9 +4361,9 @@ var Layout = /* @__PURE__ */ __name((props) => {
       /* @__PURE__ */ jsxDEV("style", { dangerouslySetInnerHTML: { __html: CSS } })
     ] }),
     /* @__PURE__ */ jsxDEV("body", { children: [
-      /* @__PURE__ */ jsxDEV(CityBackground, {}),
+
       props.children,
-      /* @__PURE__ */ jsxDEV("script", { dangerouslySetInnerHTML: { __html: PARALLAX_JS } })
+      /* @__PURE__ */ jsxDEV("script", { dangerouslySetInnerHTML: { __html: GALLERY_JS } })
     ] })
   ] });
 }, "Layout");
@@ -4663,30 +4663,60 @@ h1.page-title{font-size:26px;margin:6px 0 2px}
   .about h2{text-align:center}
   .quotes{grid-template-columns:1fr}
 }
+/* Editorial event site */
+body{background:#11110f;color:#f4f0e7}
+.desktop-site{display:block}
+.topnav{background:#11110ff5;border-color:#38332a}
+.topnav .inner,.d-wrap,.d-foot .inner{max-width:1180px}
+.d-hero{grid-template-columns:1.15fr 1fr;gap:64px;padding-top:78px;padding-bottom:78px;text-align:left}
+.d-hero h1,.d-section h2,.cta-band h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.035em}
+.d-hero h1{font-size:clamp(48px,6vw,80px);line-height:1.02;filter:none}
+.d-hero .eyebrow{font-size:11px;letter-spacing:.21em;text-shadow:none;color:#e0c28a}
+.d-hero p.lede,.about p,.cta-band p{color:#c7c1b6;font-size:17px}
+.d-hero .cta-row{justify-content:flex-start}
+.btn,.btn-gold{border-radius:6px;box-shadow:none}
+.btn-gold,.topnav .navlinks a.btn-gold{background:#dec28b;color:#19150f}
+.btn:hover{box-shadow:none}
+.gold-text{background:none;color:#e0c28a}
+.hero-gallery{position:relative;width:100%;min-width:0;overflow:hidden;border-radius:12px;border:1px solid #3d3426;background:#050505}
+.hero-slide{aspect-ratio:1}
+.hero-slide[hidden],.gallery-controls[hidden]{display:none}
+.hero-slide img{width:100%;height:100%;object-fit:contain}
+.gallery-controls{display:flex;align-items:center;justify-content:center;gap:16px;padding:10px;color:#f4f0e7}
+.gallery-controls button{background:#241f17;border:1px solid #8a724a;color:#f4f0e7;border-radius:4px;min-width:44px;min-height:44px;cursor:pointer}
+.d-section{border-color:#38332a}
+.d-section .sect-sub{color:#c7c1b6}
+.cards-4{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr}
+.cards-4 .card{display:flex;flex-direction:column;min-width:0;background:#1b1915;border:1px solid #42392c;border-radius:10px;padding:20px;backdrop-filter:none}
+.cards-4 .card h3{min-height:3em;font-size:19px;line-height:1.35}
+.cards-4 .card .muted{min-height:3.2em;color:#c7c1b6}
+.cards-4 .card .dep{color:#c7c1b6}
+.cards-4 .card .btn{margin-top:auto;text-align:center;min-height:46px}
+.stat-big{background:#1b1915;border:1px solid #42392c}
+.stat-big .l{color:#c7c1b6}
+.cta-band{background:#1b1915;border:1px solid #42392c;box-shadow:none}
+.d-foot{background:#11110f}
+@media(max-width:980px){
+ .d-hero{gap:32px;padding-top:55px;padding-bottom:55px}
+ .d-hero p.lede{margin-left:0}
+ .cards-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+ .topnav .inner,.d-wrap,.d-foot .inner{padding-left:20px;padding-right:20px}
+ .topnav .navlinks a:not(.btn){display:none}
+ .d-hero{grid-template-columns:1fr;gap:28px;padding-top:38px;padding-bottom:42px}
+ .d-hero h1{font-size:clamp(42px,10vw,60px)}
+ .hero-gallery{max-width:480px;margin-inline:auto}
+ .d-section{padding:50px 0}
+ .about{grid-template-columns:1fr;gap:20px}
+ .stat-big{padding:12px 5px}
+ .stat-big .n{font-size:24px}
+ .cta-band{padding:34px 20px}
+}
+@media(max-width:480px){.cards-4{grid-template-columns:minmax(0,1fr)}.cards-4 .card h3,.cards-4 .card .muted{min-height:0}}
+
 `;
-var PARALLAX_JS = `
-(function(){
-  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var back=document.querySelector('.skyline.back'),
-      mid=document.querySelector('.skyline.mid'),
-      front=document.querySelector('.skyline.front'),
-      sky=document.querySelector('.starfield'),
-      haze=document.querySelector('.haze'),
-      ticking=false;
-  function frame(){
-    var se=document.scrollingElement||document.documentElement;
-    var y=window.scrollY||window.pageYOffset||(se?se.scrollTop:0)||0;
-    if(sky) sky.style.transform='translateY('+(y*0.12)+'px)';
-    if(haze) haze.style.transform='translateY('+(y*0.06)+'px)';
-    if(back) back.style.transform='translateY('+(y*0.14)+'px)';
-    if(mid) mid.style.transform='translateY('+(y*0.24)+'px)';
-    if(front) front.style.transform='translateY('+(y*0.34)+'px)';
-    ticking=false;
-  }
-  window.addEventListener('scroll',function(){ if(!ticking){window.requestAnimationFrame(frame);ticking=true;} },{passive:true});
-  frame();
-})();
-`;
+var GALLERY_JS = "document.querySelectorAll('.hero-gallery').forEach(function (gallery) {\n  var slides = gallery.querySelectorAll('.hero-slide');\n  var controls = gallery.querySelector('.gallery-controls');\n  if (!controls || slides.length < 2) return;\n  var index = 0;\n  controls.hidden = false;\n  controls.querySelectorAll('button').forEach(function (button) {\n    button.addEventListener('click', function () {\n      slides[index].hidden = true;\n      index = (index + Number(button.dataset.step) + slides.length) % slides.length;\n      slides[index].hidden = false;\n      controls.querySelector('[aria-live]').textContent = (index + 1) + ' / ' + slides.length;\n    });\n  });\n});";
 
 // src/pages/landing.tsx
 var STATS = [
@@ -4694,13 +4724,31 @@ var STATS = [
   { n: "5 yrs", l: "On the decks" },
   { n: "4.9\u2605", l: "Average rating" }
 ];
+// Add future event photos to this list in display order.
+var HERO_SLIDES = [{ src: "/media/dj-chan-hero.jpg", alt: "DJ Chan gold and white logo on black" }];
+function HeroGallery() {
+  const slides = HERO_SLIDES.map((slide, i) => jsxDEV("div", {
+    class: "hero-slide", hidden: i > 0, children: jsxDEV("img", {
+      src: slide.src, alt: slide.alt, width: 1000, height: 1000,
+      loading: i === 0 ? "eager" : "lazy", decoding: "async", fetchpriority: i === 0 ? "high" : "auto"
+    })
+  }));
+  return jsxDEV("section", { class: "hero-gallery", "aria-label": "DJ Chan gallery", children: [
+    ...slides,
+    slides.length > 1 ? jsxDEV("div", { class: "gallery-controls", hidden: true, children: [
+      jsxDEV("button", { type: "button", "data-step": "-1", "aria-label": "Previous image", children: "←" }),
+      jsxDEV("span", { "aria-live": "polite", children: "1 / " + slides.length }),
+      jsxDEV("button", { type: "button", "data-step": "1", "aria-label": "Next image", children: "→" })
+    ] }) : null
+  ] });
+}
 var Landing = /* @__PURE__ */ __name((p) => {
   const base = p.siteUrl.replace(/\/$/, "");
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["MusicGroup", "LocalBusiness"],
     name: "DJ Chan",
-    description: "Open format DJ and MC for weddings, private parties, clubs and corporate events.",
+    description: "New York City DJ and MC for weddings, private celebrations, corporate events and nightlife.",
     url: base,
     logo: `${base}/logo.svg`,
     image: `${base}/logo.svg`,
@@ -4718,51 +4766,12 @@ var Landing = /* @__PURE__ */ __name((p) => {
   return /* @__PURE__ */ jsxDEV(
     Layout,
     {
-      title: "DJ Chan | Book a DJ for weddings, parties and events",
-      description: "DJ Chan brings the energy to weddings, private parties, clubs and corporate events. Check availability and lock your date with a deposit in minutes.",
+      title: "DJ Chan | NYC Wedding & Event DJ",
+      description: "DJ Chan provides professional DJ and MC services for New York City weddings, private celebrations, galas and nightlife.",
       siteUrl: p.siteUrl,
       path: "/",
       jsonLd,
       children: [
-        /* @__PURE__ */ jsxDEV("div", { class: "mobile-bio", children: [
-          /* @__PURE__ */ jsxDEV("main", { children: [
-            /* @__PURE__ */ jsxDEV("section", { class: "hero", children: [
-              /* @__PURE__ */ jsxDEV("img", { class: "logo-badge", src: "/logo.svg", alt: "DJ Chan logo", width: "200", height: "200" }),
-              /* @__PURE__ */ jsxDEV("h1", { children: "Open format DJ & MC" }),
-              /* @__PURE__ */ jsxDEV("p", { class: "tag", children: [
-                "Weddings, parties, clubs and brand events. ",
-                /* @__PURE__ */ jsxDEV("span", { class: "gold-text", children: "Let's make it unforgettable." })
-              ] })
-            ] }),
-            /* @__PURE__ */ jsxDEV("nav", { class: "links", "aria-label": "Primary links", children: [
-              /* @__PURE__ */ jsxDEV("a", { class: "link-btn primary", href: "/book", children: "Check availability & book" }),
-              /* @__PURE__ */ jsxDEV("a", { class: "link-btn", href: "https://www.instagram.com/frandypeter64/", children: "Instagram" }),
-              /* @__PURE__ */ jsxDEV("a", { class: "link-btn", href: p.tiktok, children: "TikTok / mixes" }),
-              /* @__PURE__ */ jsxDEV("a", { class: "link-btn", href: `mailto:${p.contactEmail}`, children: "Email for inquiries" })
-            ] }),
-            /* @__PURE__ */ jsxDEV("section", { class: "band", children: /* @__PURE__ */ jsxDEV("div", { class: "wrap", children: [
-              /* @__PURE__ */ jsxDEV("h2", { class: "section-title", children: "Packages" }),
-              /* @__PURE__ */ jsxDEV("div", { class: "cards", children: SERVICES.map((s) => /* @__PURE__ */ jsxDEV("div", { class: "card", children: [
-                /* @__PURE__ */ jsxDEV("h3", { children: s.name }),
-                /* @__PURE__ */ jsxDEV("p", { class: "muted", style: "margin:0;font-size:14px", children: s.tagline }),
-                /* @__PURE__ */ jsxDEV("div", { class: "price", children: [
-                  "From ",
-                  /* @__PURE__ */ jsxDEV("span", { class: "gold-text", children: money(s.priceCents, p.currency) })
-                ] }),
-                /* @__PURE__ */ jsxDEV("p", { class: "dep", children: [
-                  money(s.depositCents, p.currency),
-                  " deposit to reserve"
-                ] }),
-                /* @__PURE__ */ jsxDEV("ul", { children: s.features.map((f) => /* @__PURE__ */ jsxDEV("li", { children: f })) }),
-                /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold btn-block", href: `/book?service=${s.id}`, children: [
-                  "Book ",
-                  s.name
-                ] })
-              ] })) })
-            ] }) })
-          ] }),
-          /* @__PURE__ */ jsxDEV(Footer, { contactEmail: p.contactEmail, instagram: p.instagram, tiktok: p.tiktok })
-        ] }),
         /* @__PURE__ */ jsxDEV("div", { class: "desktop-site", children: [
           /* @__PURE__ */ jsxDEV("header", { class: "topnav", children: /* @__PURE__ */ jsxDEV("div", { class: "inner", children: [
             /* @__PURE__ */ jsxDEV("a", { class: "brand", href: "/", "aria-label": "DJ Chan home", children: [
@@ -4780,18 +4789,18 @@ var Landing = /* @__PURE__ */ __name((p) => {
           /* @__PURE__ */ jsxDEV("main", { children: [
             /* @__PURE__ */ jsxDEV("section", { class: "d-wrap d-hero", children: [
               /* @__PURE__ */ jsxDEV("div", { children: [
-                /* @__PURE__ */ jsxDEV("p", { class: "eyebrow", children: "Open format DJ & MC" }),
+                /* @__PURE__ */ jsxDEV("p", { class: "eyebrow", children: "NEW YORK CITY · DJ & MC" }),
                 /* @__PURE__ */ jsxDEV("h1", { children: [
-                  "Turn your night into ",
-                  /* @__PURE__ */ jsxDEV("span", { class: "gold-text", children: "a headline show." })
+                  "The right music for ",
+                  /* @__PURE__ */ jsxDEV("span", { class: "gold-text", children: "your occasion." })
                 ] }),
-                /* @__PURE__ */ jsxDEV("p", { class: "lede", children: "DJ Chan brings the energy, the gear and the crowd-reading instincts to weddings, private parties, clubs and brand events. Lock your date online in minutes." }),
+                /* @__PURE__ */ jsxDEV("p", { class: "lede", children: "From wedding receptions and corporate galas to private parties and late-night sets, DJ Chan brings thoughtful planning, professional sound, and music that fits the room." }),
                 /* @__PURE__ */ jsxDEV("div", { class: "cta-row", children: [
-                  /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: "/book", children: "Check availability & book" }),
+                  /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: "/book", children: "Check availability" }),
                   /* @__PURE__ */ jsxDEV("a", { class: "btn", href: "#services", children: "View packages" })
                 ] })
               ] }),
-              /* @__PURE__ */ jsxDEV("div", { class: "art", children: /* @__PURE__ */ jsxDEV("img", { src: "/logo.svg", alt: "DJ Chan logo", width: "430", height: "430" }) })
+              jsxDEV(HeroGallery, {})
             ] }),
             /* @__PURE__ */ jsxDEV("section", { id: "services", class: "d-section", children: /* @__PURE__ */ jsxDEV("div", { class: "d-wrap", children: [
               /* @__PURE__ */ jsxDEV("h2", { children: "Packages" }),
@@ -4816,8 +4825,8 @@ var Landing = /* @__PURE__ */ __name((p) => {
             ] }) }),
             /* @__PURE__ */ jsxDEV("section", { id: "about", class: "d-section", children: /* @__PURE__ */ jsxDEV("div", { class: "d-wrap about", children: [
               /* @__PURE__ */ jsxDEV("div", { children: [
-                /* @__PURE__ */ jsxDEV("h2", { children: "Built for the dancefloor" }),
-                /* @__PURE__ */ jsxDEV("p", { children: "From intimate weddings to sold-out venues, DJ Chan blends open-format sets with clean transitions and real crowd reading. Professional sound and lighting, backup gear on site, and an MC who keeps the night moving." }),
+                /* @__PURE__ */ jsxDEV("h2", { children: "Experience behind the decks" }),
+                /* @__PURE__ */ jsxDEV("p", { children: "With five years behind the decks and more than 100 events played, DJ Chan knows when to set the tone, when to get people dancing, and when to let a moment speak for itself." }),
                 /* @__PURE__ */ jsxDEV("p", { class: "muted", children: "Every booking includes a planning consultation so your timeline, must-play songs and do-not-play list are dialed in before you arrive." })
               ] }),
               /* @__PURE__ */ jsxDEV("div", { class: "stats-row", children: STATS.map((s) => /* @__PURE__ */ jsxDEV("div", { class: "stat-big", children: [
@@ -4831,8 +4840,8 @@ var Landing = /* @__PURE__ */ __name((p) => {
               /* @__PURE__ */ jsxDEV("div", { style: "text-align:center", children: /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: "https://www.instagram.com/frandypeter64/", target: "_blank", rel: "noopener noreferrer", children: "Connect on Instagram" }) })
             ] }) }),
             /* @__PURE__ */ jsxDEV("section", { class: "d-wrap", children: /* @__PURE__ */ jsxDEV("div", { class: "cta-band", children: [
-              /* @__PURE__ */ jsxDEV("h2", { children: "Ready to lock your date?" }),
-              /* @__PURE__ */ jsxDEV("p", { children: "Check availability and reserve with a deposit in a couple of minutes." }),
+              /* @__PURE__ */ jsxDEV("h2", { children: "Let’s talk about your event." }),
+              /* @__PURE__ */ jsxDEV("p", { children: "Tell us your date, venue, and what you have in mind." }),
               /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold", href: "/book", children: "Book DJ Chan" })
             ] }) })
           ] }),
