@@ -3404,6 +3404,9 @@ var deleteCookie = /* @__PURE__ */ __name((c, name, opt) => {
 var SERVICES = [
   {
     id: "party",
+    occasion: "Private parties",
+    experienceTitle: "A party that sounds like you",
+    experience: "Set the mood with a mix shaped around your guests and favorite genres. The set can move from arrival music to a full dance floor as the night picks up.",
     name: "Private Celebrations",
     tagline: "Birthdays, house parties, celebrations",
     priceCents: 30000,
@@ -3412,6 +3415,9 @@ var SERVICES = [
   },
   {
     id: "wedding",
+    occasion: "Weddings",
+    experienceTitle: "From the ceremony to the last dance",
+    experience: "Plan the music for your ceremony, cocktail hour, and reception in one conversation. We’ll work through entrances, special dances, must-play songs, and the moments that need an announcement.",
     name: "The Wedding Collection",
     tagline: "Ceremony, cocktail hour, reception",
     priceCents: 90000,
@@ -3420,6 +3426,9 @@ var SERVICES = [
   },
   {
     id: "club",
+    occasion: "Nightlife & venues",
+    experienceTitle: "A set built around the room",
+    experience: "For clubs, lounges, and venue nights. Set the direction up front, then let DJ Chan read the room and adjust the pace live, with clean transitions across genres.",
     name: "The Venue Set",
     tagline: "Nightlife sets and residencies",
     priceCents: 45000,
@@ -3428,6 +3437,9 @@ var SERVICES = [
   },
   {
     id: "corporate",
+    occasion: "Corporate events & galas",
+    experienceTitle: "Music that follows the program",
+    experience: "Set the tone for arrivals, keep music at conversation level during dinner or networking, and shift the energy when the formal program wraps. We’ll plan the playlist around your run of show.",
     name: "Corporate & Gala",
     tagline: "Launches, galas, brand activations",
     priceCents: 75000,
@@ -4362,7 +4374,6 @@ var Layout = /* @__PURE__ */ __name((props) => {
     ] }),
     /* @__PURE__ */ jsxDEV("body", { children: [
 
-      jsxDEV(CityBackground, {}),
       props.children,
       /* @__PURE__ */ jsxDEV("script", { dangerouslySetInnerHTML: { __html: GALLERY_JS } })
     ] })
@@ -4731,6 +4742,31 @@ body{background:#090a10}
 .d-section{border-color:#b58d4b47}
 .cta-band{background:radial-gradient(ellipse at 50% 0%,#4b3824,#181720 72%);border-color:#896a40;box-shadow:0 16px 48px #0006}
 
+/* Keep the skyline with the hero, and close the page on a solid footer. */
+html,body{background:#0c0d13;overscroll-behavior-y:none}
+.desktop-site{min-height:100vh;display:flex;flex-direction:column}
+.desktop-site main{flex:1;background:radial-gradient(ellipse at 90% 36%,#272018 0%,transparent 46%),linear-gradient(#10111a,#13131b 72%,#0c0d13)}
+.hero-scene{position:relative;isolation:isolate;overflow:hidden}
+.hero-scene .city-bg{position:absolute;z-index:-1;background:radial-gradient(ellipse at 78% 45%,#382918 0%,transparent 53%),linear-gradient(160deg,#0b0d17,#161929 72%,#14131b)}
+.hero-scene .city-bg .skyline{opacity:.62}
+.hero-scene .city-bg .ground-glow{display:none}
+.hero-scene .city-bg .bg-dim{opacity:1;background:linear-gradient(transparent 65%,#10111a)}
+.hero-scene .city-bg .fog{opacity:.35}
+.d-foot,.site-foot{background:#0c0d13;backdrop-filter:none;border-top:1px solid #6b573a}
+.d-foot{margin:0}
+.desktop-site main>.d-wrap:last-child{padding-bottom:32px}
+.cards-4{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.cards-4 .card{padding:clamp(22px,4vw,44px);border-radius:16px;background:linear-gradient(145deg,#29241e,#191923 82%);position:relative}
+.cards-4 .card h3{min-height:0;font:400 clamp(29px,3vw,42px)/1.08 Georgia,serif;margin:0 0 14px}
+.package-occasion,.package-includes{font-size:11px;font-weight:750;letter-spacing:.16em;text-transform:uppercase;color:#e0c28a;margin:0 0 12px}
+.package-promise{font-size:17px;font-weight:650;color:#f4f0e7;margin:0 0 6px}
+.package-experience{font-size:16px;color:#d0c8bb;margin:0 0 24px;max-width:49ch}
+.cards-4 .card ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;margin-bottom:24px}
+.cards-4 .card .price{margin-top:auto;padding-top:15px;border-top:1px solid #766044}
+.cards-4 .card .btn{margin-top:12px}
+@media(max-width:700px){.cards-4{grid-template-columns:minmax(0,1fr);grid-auto-rows:auto}.hero-scene .city-bg .skyline{max-height:36%}}
+@media(max-width:380px){.cards-4 .card ul{grid-template-columns:1fr}}
+
 `;
 var GALLERY_JS = "document.querySelectorAll('.hero-gallery').forEach(function (gallery) {\n  var slides = gallery.querySelectorAll('.hero-slide');\n  var controls = gallery.querySelector('.gallery-controls');\n  if (!controls || slides.length < 2) return;\n  var index = 0;\n  controls.hidden = false;\n  controls.querySelectorAll('button').forEach(function (button) {\n    button.addEventListener('click', function () {\n      slides[index].hidden = true;\n      index = (index + Number(button.dataset.step) + slides.length) % slides.length;\n      slides[index].hidden = false;\n      controls.querySelector('[aria-live]').textContent = (index + 1) + ' / ' + slides.length;\n    });\n  });\n});";
 
@@ -4803,7 +4839,9 @@ var Landing = /* @__PURE__ */ __name((p) => {
             ] })
           ] }) }),
           /* @__PURE__ */ jsxDEV("main", { children: [
-            /* @__PURE__ */ jsxDEV("section", { class: "d-wrap d-hero", children: [
+            /* @__PURE__ */ jsxDEV("div", { class: "hero-scene", children: [
+            jsxDEV(CityBackground, {}),
+            jsxDEV("section", { class: "d-wrap d-hero", children: [
               /* @__PURE__ */ jsxDEV("div", { children: [
                 /* @__PURE__ */ jsxDEV("p", { class: "eyebrow", children: "NEW YORK CITY · DJ & MC" }),
                 /* @__PURE__ */ jsxDEV("h1", { children: [
@@ -4817,13 +4855,18 @@ var Landing = /* @__PURE__ */ __name((p) => {
                 ] })
               ] }),
               jsxDEV(HeroGallery, {})
+            ] })
             ] }),
             /* @__PURE__ */ jsxDEV("section", { id: "services", class: "d-section", children: /* @__PURE__ */ jsxDEV("div", { class: "d-wrap", children: [
               /* @__PURE__ */ jsxDEV("h2", { children: "Packages" }),
-              /* @__PURE__ */ jsxDEV("p", { class: "sect-sub", children: "Straightforward pricing. A deposit reserves your date, balance due before the event." }),
-              /* @__PURE__ */ jsxDEV("div", { class: "cards-4", children: SERVICES.map((s) => /* @__PURE__ */ jsxDEV("div", { class: "card", children: [
+              /* @__PURE__ */ jsxDEV("p", { class: "sect-sub", children: "Choose the experience that fits your event. A deposit reserves your date; the balance is due before the event." }),
+              /* @__PURE__ */ jsxDEV("div", { class: "cards-4", children: ["wedding", "party", "corporate", "club"].map(getService).map((s) => jsxDEV("article", { class: "card", children: [
+                jsxDEV("p", { class: "package-occasion", children: s.occasion }),
                 /* @__PURE__ */ jsxDEV("h3", { children: s.name }),
-                /* @__PURE__ */ jsxDEV("p", { class: "muted", style: "margin:0;font-size:14px", children: s.tagline }),
+                /* @__PURE__ */ jsxDEV("p", { class: "package-promise", children: s.experienceTitle }),
+                jsxDEV("p", { class: "package-experience", children: s.experience }),
+                jsxDEV("p", { class: "package-includes", children: "What’s included" }),
+                jsxDEV("ul", { children: s.features.map((f) => jsxDEV("li", { children: f })) }),
                 /* @__PURE__ */ jsxDEV("div", { class: "price", children: [
                   "From ",
                   /* @__PURE__ */ jsxDEV("span", { class: "gold-text", children: money(s.priceCents, p.currency) })
@@ -4832,10 +4875,8 @@ var Landing = /* @__PURE__ */ __name((p) => {
                   money(s.depositCents, p.currency),
                   " deposit to reserve"
                 ] }),
-                /* @__PURE__ */ jsxDEV("ul", { children: s.features.map((f) => /* @__PURE__ */ jsxDEV("li", { children: f })) }),
                 /* @__PURE__ */ jsxDEV("a", { class: "btn btn-gold btn-block", href: `/book?service=${s.id}`, children: [
-                  "Book ",
-                  s.name
+                  "Check availability"
                 ] })
               ] })) })
             ] }) }),
