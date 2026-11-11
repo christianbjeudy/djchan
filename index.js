@@ -4767,6 +4767,18 @@ html,body{background:#0c0d13;overscroll-behavior-y:none}
 @media(max-width:700px){.cards-4{grid-template-columns:minmax(0,1fr);grid-auto-rows:auto}.hero-scene .city-bg .skyline{max-height:36%}}
 @media(max-width:380px){.cards-4 .card ul{grid-template-columns:1fr}}
 
+.hero-scene .skyline{left:-11%;right:auto;width:122%}
+.hero-scene .skyline.back{opacity:.44;animation:city-pan 70s ease-in-out infinite alternate}
+.hero-scene .skyline.mid{opacity:.59;animation:city-pan 53s ease-in-out infinite alternate}
+.hero-scene .skyline.front{opacity:.77;animation:city-pan 41s ease-in-out infinite alternate}
+@keyframes city-pan{from{transform:translateX(-6%)}to{transform:translateX(6%)}}
+.hero-scene .starfield{inset:0 0 45%;opacity:.48;background-size:340px 210px}
+.hero-scene .starfield::before,.hero-scene .starfield::after{content:"";position:absolute;inset:0;pointer-events:none}
+.hero-scene .starfield::before{background:radial-gradient(2px 2px at 17% 15%,#fff6da,transparent),radial-gradient(2px 2px at 57% 9%,#fff,transparent),radial-gradient(2px 2px at 84% 27%,#fff6da,transparent);animation:star-glint 6s ease-in-out infinite alternate}
+.hero-scene .starfield::after{background:radial-gradient(2px 2px at 35% 30%,#fff,transparent),radial-gradient(2px 2px at 69% 18%,#fff6da,transparent),radial-gradient(2px 2px at 93% 11%,#fff,transparent);animation:star-glint 8s ease-in-out -3s infinite alternate}
+@keyframes star-glint{0%,20%{opacity:.22}55%{opacity:1}100%{opacity:.45}}
+@media(prefers-reduced-motion:reduce){.hero-scene .skyline,.hero-scene .starfield::before,.hero-scene .starfield::after{animation:none}}
+
 `;
 var GALLERY_JS = "document.querySelectorAll('.hero-gallery').forEach(function (gallery) {\n  var slides = gallery.querySelectorAll('.hero-slide');\n  var controls = gallery.querySelector('.gallery-controls');\n  if (!controls || slides.length < 2) return;\n  var index = 0;\n  controls.hidden = false;\n  controls.querySelectorAll('button').forEach(function (button) {\n    button.addEventListener('click', function () {\n      slides[index].hidden = true;\n      index = (index + Number(button.dataset.step) + slides.length) % slides.length;\n      slides[index].hidden = false;\n      controls.querySelector('[aria-live]').textContent = (index + 1) + ' / ' + slides.length;\n    });\n  });\n});";
 
